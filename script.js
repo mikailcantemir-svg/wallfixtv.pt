@@ -1,10 +1,10 @@
 function toggleMenu() {
-  const menu = document.getElementById("menu");
+  const menu = document.getElementById("mainMenu");
   menu.classList.toggle("open");
 }
 
-document.querySelectorAll("#menu a").forEach((link) => {
+document.querySelectorAll("#mainMenu a").forEach((link) => {
   link.addEventListener("click", () => {
-    document.getElementById("menu").classList.remove("open");
+    document.getElementById("mainMenu").classList.remove("open");
   });
 });

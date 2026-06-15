@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>WallFixTV.pt | Montagem de TV na Parede</title>
-  <meta name="description" content="Montagem profissional de TV na parede com instalação segura, suportes fixos ou articulados, organização de cabos e acabamento limpo." />
+  <meta name="description" content="Montagem profissional de TV na parede com suporte fixo ou articulado, organização de cabos e acabamento limpo. Peça orçamento por WhatsApp." />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -13,254 +13,225 @@
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a href="#inicio" class="logo" aria-label="WallFixTV.pt">
-        <img src="assets/wallfixtv-logo.jpeg" alt="WallFixTV.pt - montagem de TV na parede" />
+      <a class="brand" href="#inicio" aria-label="WallFixTV.pt">
+        <img src="assets/wallfixtv-logo.png" alt="WallFixTV.pt" />
       </a>
 
-      <button class="menu-btn" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+      <button class="menu-button" onclick="toggleMenu()" aria-label="Abrir menu">☰</button>
 
-      <nav id="menu">
-        <a href="#inicio">Início</a>
+      <nav id="mainMenu">
+        <a href="#inicio" class="active">Início</a>
         <a href="#servicos">Serviços</a>
-        <a href="#como-funciona">Como Funciona</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#vantagens">Vantagens</a>
         <a href="#trabalhos">Trabalhos</a>
         <a href="#contacto">Contacto</a>
       </nav>
 
-      <a class="header-whatsapp" href="https://wa.me/351932504112?text=Olá%2C%20quero%20um%20orçamento%20para%20montar%20uma%20TV%20na%20parede." target="_blank" rel="noopener">
-        <span>WhatsApp</span>
-        <small>Resposta rápida</small>
+      <a class="header-whatsapp" href="https://wa.me/351932504112?text=Olá%2C%20quero%20montar%20uma%20TV%20na%20parede.%20Posso%20enviar%20fotografias%3F" target="_blank" rel="noopener">
+        <span>☏</span>
+        <strong>932 504 112</strong>
       </a>
     </div>
   </header>
 
-  <main>
-    <section id="inicio" class="hero">
+  <main id="inicio">
+    <section class="hero">
       <div class="container hero-grid">
-        <div class="hero-content">
-          <p class="eyebrow">Instalação profissional de televisores</p>
-
-          <h1>
-            Montagem de TV na parede com
-            <span>segurança e profissionalismo</span>
-          </h1>
-
-          <p class="hero-text">
-            Instalamos a sua televisão com suporte fixo, inclinável ou articulado.
-            Fazemos a fixação correta para cada tipo de parede, com alinhamento,
-            acabamento limpo e organização dos cabos.
+        <div class="hero-copy">
+          <p class="mini-title">WallFixTV.pt</p>
+          <h1>Montagem de TV<br><span>na Parede</span></h1>
+          <p class="hero-subtitle">
+            Instalação profissional, segura e com acabamento limpo.
+            Montamos a sua televisão com suporte fixo ou articulado e deixamos o espaço mais moderno.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/351932504112?text=Olá%2C%20quero%20montar%20uma%20TV%20na%20parede.%20Posso%20enviar%20fotografias%3F" target="_blank" rel="noopener">
-              Fale connosco pelo WhatsApp
-            </a>
-
-            <a class="btn btn-secondary" href="#contacto">
-              Agendar instalação
-            </a>
-          </div>
-
-          <div class="trust-points">
+          <div class="hero-features">
             <div>
-              <strong>Fixação segura</strong>
-              <span>Instalação resistente e nivelada</span>
+              <span>♢</span>
+              <strong>Segurança</strong>
+              <small>Fixação segura e resistente</small>
             </div>
             <div>
-              <strong>Acabamento limpo</strong>
-              <span>Cabos organizados e visual elegante</span>
+              <span>⌁</span>
+              <strong>Organização</strong>
+              <small>Cabos discretos e bem arrumados</small>
             </div>
             <div>
-              <strong>Serviço rápido</strong>
-              <span>Resposta simples por WhatsApp</span>
+              <span>◎</span>
+              <strong>Qualidade</strong>
+              <small>Acabamento profissional</small>
             </div>
           </div>
+
+          <a class="btn primary" href="https://wa.me/351932504112?text=Olá%2C%20quero%20agendar%20uma%20montagem%20de%20TV%20na%20parede." target="_blank" rel="noopener">
+            ☏ Agendar pelo WhatsApp
+          </a>
         </div>
 
-        <div class="hero-visual" aria-label="Televisão montada na parede">
-          <div class="room">
-            <div class="wall-panel"></div>
-            <div class="tv-screen"></div>
-            <div class="soundbar"></div>
-            <div class="cabinet"></div>
-            <div class="plant plant-left"></div>
-            <div class="plant plant-right"></div>
-          </div>
+        <div class="hero-image">
+          <img src="assets/hero-tv-wall.png" alt="Sala moderna com TV montada na parede" />
         </div>
       </div>
     </section>
 
     <section id="servicos" class="section services">
       <div class="container">
-        <div class="section-title">
-          <p class="eyebrow">Os nossos serviços</p>
-          <h2>Soluções para montar a sua TV com segurança</h2>
-          <p>
-            Cada instalação é feita de acordo com o tamanho da TV, peso, tipo de suporte
-            e tipo de parede.
-          </p>
+        <div class="section-heading">
+          <p>Os nossos serviços</p>
+          <h2>Soluções completas para a sua TV</h2>
         </div>
 
-        <div class="cards">
-          <article class="card">
-            <div class="icon">▭</div>
-            <h3>Montagem de TV na parede</h3>
-            <p>Instalação com suporte fixo ou inclinável, alinhamento e teste final.</p>
-            <a href="#contacto">Saber mais →</a>
+        <div class="service-grid">
+          <article class="service-card">
+            <img src="assets/service-montagem-tv.png" alt="TV montada na parede numa sala moderna" />
+            <h3>Montagem de TV</h3>
+            <p>Instalação da sua TV na parede com alinhamento correto e fixação adequada.</p>
           </article>
 
-          <article class="card">
-            <div class="icon">↔</div>
-            <h3>Suportes articulados</h3>
-            <p>Instalação de braços articulados para ajustar a televisão ao melhor ângulo.</p>
-            <a href="#contacto">Saber mais →</a>
+          <article class="service-card">
+            <img src="assets/service-cabos-tv.png" alt="TV com instalação organizada" />
+            <h3>Esconder Cabos</h3>
+            <p>Organização dos cabos para deixar o ambiente mais limpo e elegante.</p>
           </article>
 
-          <article class="card">
-            <div class="icon">⌁</div>
-            <h3>Organização de cabos</h3>
-            <p>Arrumação e passagem de cabos para um resultado mais limpo e discreto.</p>
-            <a href="#contacto">Saber mais →</a>
+          <article class="service-card">
+            <img src="assets/service-suporte-tv.png" alt="TV instalada com suporte adequado" />
+            <h3>Suportes Fixos e Articulados</h3>
+            <p>Instalamos suportes fixos, inclináveis e articulados, conforme a necessidade.</p>
           </article>
 
-          <article class="card">
-            <div class="icon">▦</div>
-            <h3>Pladur, tijolo e betão</h3>
-            <p>Utilização de fixações adequadas ao tipo de parede e ao peso da televisão.</p>
-            <a href="#contacto">Saber mais →</a>
+          <article class="service-card">
+            <img src="assets/service-espacos-tv.png" alt="TV instalada num espaço moderno" />
+            <h3>Instalação em Diversos Espaços</h3>
+            <p>Salas, quartos, cozinhas, escritórios, lojas e alojamentos locais.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="como-funciona" class="section how">
+    <section id="como-funciona" class="process">
       <div class="container">
-        <div class="section-title centered">
-          <p class="eyebrow">Processo simples</p>
-          <h2>Como funciona</h2>
-          <p>Envie os detalhes, receba orientação e marcamos a instalação.</p>
+        <div class="section-heading light">
+          <p>Como funciona</p>
+          <h2>Simples, rápido e sem complicações</h2>
         </div>
 
-        <div class="steps">
-          <div class="step">
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="icon">☏</div>
             <span>1</span>
             <h3>Fale connosco</h3>
-            <p>Envie uma mensagem com o tamanho da TV, tipo de parede e fotografias do local.</p>
+            <p>Envie mensagem pelo WhatsApp com fotos da parede e tamanho da TV.</p>
           </div>
 
-          <div class="step">
+          <div class="process-step">
+            <div class="icon">▦</div>
             <span>2</span>
             <h3>Agendamos</h3>
-            <p>Confirmamos o serviço, o material necessário e combinamos o melhor horário.</p>
+            <p>Marcamos o melhor dia e horário para si.</p>
           </div>
 
-          <div class="step">
+          <div class="process-step">
+            <div class="icon">⚒</div>
             <span>3</span>
             <h3>Instalamos</h3>
-            <p>Montamos a televisão, nivelamos, testamos e deixamos a zona limpa.</p>
+            <p>Fazemos a montagem com segurança, nível e cuidado.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="icon">✓</div>
+            <span>4</span>
+            <h3>Tudo pronto</h3>
+            <p>Deixamos a TV montada e o espaço limpo.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="benefits">
-      <div class="container benefits-grid">
-        <div>
-          <strong>Segurança em primeiro lugar</strong>
-          <span>Fixação correta para cada parede.</span>
+    <section id="vantagens" class="split-section">
+      <div class="container split-grid">
+        <div class="split-copy">
+          <p class="mini-title">Porque escolher a WallFixTV?</p>
+          <h2>Experiência que faz<br><span>a diferença</span></h2>
+          <ul>
+            <li>Profissionais experientes e cuidadosos</li>
+            <li>Serviço rápido, limpo e eficiente</li>
+            <li>Atenção aos detalhes e acabamento premium</li>
+            <li>Instalação adaptada ao tipo de parede</li>
+          </ul>
         </div>
 
-        <div>
-          <strong>Acabamento profissional</strong>
-          <span>Instalação alinhada, discreta e limpa.</span>
-        </div>
-
-        <div>
-          <strong>Pontualidade</strong>
-          <span>Respeitamos o horário combinado.</span>
-        </div>
-
-        <div>
-          <strong>Satisfação garantida</strong>
-          <span>Trabalho feito com atenção ao detalhe.</span>
+        <div class="split-image">
+          <img src="assets/vantagens-tv.png" alt="Interior moderno com televisão montada na parede" />
         </div>
       </div>
     </section>
 
-    <section id="trabalhos" class="section gallery-section">
+    <section id="trabalhos" class="section gallery">
       <div class="container">
-        <div class="section-title centered">
-          <p class="eyebrow">Trabalhos recentes</p>
-          <h2>Exemplos de instalações</h2>
-          <p>Espaços modernos, TVs bem alinhadas e acabamentos limpos.</p>
+        <div class="section-heading left">
+          <p>Trabalhos recentes</p>
+          <h2>Veja alguns dos nossos trabalhos</h2>
         </div>
 
-        <div class="gallery">
-          <div class="gallery-item item-1"></div>
-          <div class="gallery-item item-2"></div>
-          <div class="gallery-item item-3"></div>
-          <div class="gallery-item item-4"></div>
-          <div class="gallery-item item-5"></div>
-        </div>
-
-        <div class="center-action">
-          <a class="btn btn-secondary" href="#contacto">Ver mais trabalhos</a>
+        <div class="gallery-grid">
+          <img src="assets/trabalho-tv-1.png" alt="TV montada numa sala moderna" />
+          <img src="assets/trabalho-tv-2.png" alt="Sala com TV montada na parede" />
+          <img src="assets/trabalho-tv-3.png" alt="Televisão instalada sobre móvel" />
+          <img src="assets/trabalho-tv-4.png" alt="Sala premium com TV na parede" />
+          <img src="assets/trabalho-tv-5.png" alt="Interior residencial com TV montada" />
         </div>
       </div>
     </section>
 
-    <section id="contacto" class="section contact">
-      <div class="container contact-box">
+    <section class="cta-band">
+      <div class="container cta-grid">
         <div>
-          <p class="eyebrow">Contacto</p>
-          <h2>Quer montar a sua TV na parede?</h2>
-          <p>
-            Envie fotografias da parede, o tamanho da TV e o tipo de suporte.
-            Respondemos com orientação rápida e clara.
-          </p>
+          <h2>Pronto para transformar o seu espaço?</h2>
+          <p>Fale connosco agora mesmo pelo WhatsApp.</p>
         </div>
-
-        <div class="contact-card">
-          <img src="assets/wallfixtv-logo.jpeg" alt="WallFixTV.pt" />
-          <p><strong>WhatsApp:</strong> 932 504 112</p>
-          <p><strong>Email:</strong> geral@wallfixtv.pt</p>
-          <p><strong>Área de serviço:</strong> Lisboa e arredores</p>
-
-          <a class="btn btn-whatsapp" href="https://wa.me/351932504112?text=Olá%2C%20quero%20montar%20uma%20TV%20na%20parede." target="_blank" rel="noopener">
-            Abrir WhatsApp
-          </a>
-        </div>
+        <a class="btn primary" href="https://wa.me/351932504112?text=Olá%2C%20quero%20montar%20uma%20TV%20na%20parede." target="_blank" rel="noopener">☏ 932 504 112</a>
       </div>
     </section>
+
+    <footer id="contacto">
+      <div class="container footer-grid">
+        <div>
+          <img class="footer-logo" src="assets/wallfixtv-logo.png" alt="WallFixTV.pt" />
+          <p>Especialistas em montagem de TV na parede, com foco em segurança, organização e acabamento perfeito.</p>
+        </div>
+
+        <div>
+          <h3>Navegação</h3>
+          <a href="#inicio">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#vantagens">Vantagens</a>
+          <a href="#trabalhos">Trabalhos</a>
+        </div>
+
+        <div>
+          <h3>Serviços</h3>
+          <a href="#servicos">Montagem de TV</a>
+          <a href="#servicos">Esconder cabos</a>
+          <a href="#servicos">Suportes fixos e articulados</a>
+          <a href="#servicos">Instalação em diversos espaços</a>
+        </div>
+
+        <div>
+          <h3>Contacto</h3>
+          <p>☏ 932 504 112</p>
+          <p>✉ geral@wallfixtv.pt</p>
+          <p>⌖ Lisboa e arredores</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © 2026 WallFixTV.pt — Todos os direitos reservados.
+      </div>
+    </footer>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <img src="assets/wallfixtv-logo.jpeg" alt="WallFixTV.pt" />
-        <p>Especialistas em montagem de TV na parede com segurança, organização e acabamento profissional.</p>
-      </div>
-
-      <div>
-        <h3>Navegação</h3>
-        <a href="#inicio">Início</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#como-funciona">Como Funciona</a>
-        <a href="#trabalhos">Trabalhos</a>
-        <a href="#contacto">Contacto</a>
-      </div>
-
-      <div>
-        <h3>Fale connosco</h3>
-        <p>Envie uma mensagem pelo WhatsApp e receba resposta rápida.</p>
-        <a class="btn btn-whatsapp" href="https://wa.me/351932504112" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </div>
-
-    <div class="copyright">
-      © 2026 WallFixTV.pt — Todos os direitos reservados.
-    </div>
-  </footer>
 
   <script src="script.js"></script>
 </body>
