@@ -1,0 +1,10 @@
+# Exportação local para revisão (nunca publicar)
+review-export/
+CODIGO_COMPLETO_WALLFIXTV_REVIEW.md
+*.review.md
+
+# Ferramentas locais de otimização de imagens
+scripts/tools/
+
+# Dependências locais (se existirem no futuro)
+node_modules/

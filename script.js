@@ -3,18 +3,27 @@
   const menu = document.getElementById("mainMenu");
   const navLinks = document.querySelectorAll("#mainMenu a, .footer-col nav a");
 
+  function closeMenu() {
+    if (menu) menu.classList.remove("open");
+    if (menuButton) menuButton.setAttribute("aria-expanded", "false");
+  }
+
   if (menuButton && menu) {
-    menuButton.addEventListener("click", () => {
+    menuButton.addEventListener("click", (event) => {
+      event.stopPropagation();
       const isOpen = menu.classList.toggle("open");
       menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!menu.classList.contains("open")) return;
+      if (menu.contains(event.target) || menuButton.contains(event.target)) return;
+      closeMenu();
     });
   }
 
   navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      if (menu) menu.classList.remove("open");
-      if (menuButton) menuButton.setAttribute("aria-expanded", "false");
-    });
+    link.addEventListener("click", closeMenu);
   });
 
   const sections = document.querySelectorAll("section[id], main[id]");
@@ -54,6 +63,11 @@
   if (!modal || !form) return;
 
   function openModal() {
+    const mobileMenu = document.getElementById("mainMenu");
+    const mobileMenuButton = document.querySelector(".menu-button");
+    if (mobileMenu) mobileMenu.classList.remove("open");
+    if (mobileMenuButton) mobileMenuButton.setAttribute("aria-expanded", "false");
+
     lastFocusedElement = document.activeElement;
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");

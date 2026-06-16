@@ -3,54 +3,71 @@
 Site institucional de montagem de TV na parede, suportes fixos/articulados, organização de cabos e instalação em pladur, tijolo e betão.
 
 **Domínio:** https://www.wallfixtv.pt/  
-**WhatsApp:** +351 932 504 112  
-**Email:** geral@wallfixtv.pt
+**WhatsApp:** +351 932 504 112
 
-## Palavras-chave principais
+## Descrição do projeto
 
-- montagem de TV na parede
-- instalação de TV na parede
-- montar TV na parede
-- suporte fixo para TV
-- suporte articulado para TV
-- organização de cabos TV
-- esconder cabos TV
-- instalação de TV em pladur
-- instalação de TV em betão
-- instalação de TV em tijolo
-- montagem de TV Lisboa
-- montagem de TV Grande Lisboa
-- montagem de TV Margem Sul
+Site estático, responsivo e otimizado para SEO local, focado em converter visitantes em contactos por WhatsApp ou pedidos de agendamento através do popup integrado.
 
-## Zonas atendidas
+## Estrutura de ficheiros
 
-Lisboa, Grande Lisboa, Odivelas, Loures, Amadora, Sintra, Cascais, Almada, Seixal, Barreiro, Montijo, Margem Sul e zonas próximas.
+```
+index.html          # Página principal
+styles.css          # Estilos e layout responsivo
+script.js           # Menu mobile, navegação ativa e popup de agendamento
+robots.txt          # Instruções para motores de busca
+sitemap.xml         # Mapa do site
+CNAME               # www.wallfixtv.pt
+README.md
+package.json        # Script local de exportação para revisão
+scripts/
+  export-review-code.js
+  optimize-assets.ps1
+assets/
+  images/           # Hero, galeria e imagem OG
+  icons/            # Ícones de serviços e processo
+  logos/            # Logótipo
+```
 
-## Checklist SEO implementada
+## SEO aplicado
 
-- [x] Title e meta description otimizados
-- [x] Canonical, robots, author e theme-color
-- [x] Open Graph e Twitter Cards
-- [x] H1 e copy do hero otimizados
-- [x] Secção de serviços com textos SEO
-- [x] Secção de zonas atendidas
-- [x] Secção de confiança
-- [x] FAQ com conteúdo útil
-- [x] Schema LocalBusiness (sem reviews falsas)
-- [x] Schema FAQPage
-- [x] `robots.txt` e `sitemap.xml`
-- [x] Alt text melhorado nas imagens
-- [x] Lazy loading fora do hero
-- [x] Imagem OG e logo para partilha social
+- Title, meta description e canonical
+- Open Graph e Twitter Cards com imagem OG dedicada
+- H1 e copy otimizados para montagem de TV na parede
+- Secções de serviços, zonas, FAQ e conteúdo de confiança
+- Schema `LocalBusiness` (sem reviews inventadas)
+- Schema `FAQPage`
+- `robots.txt` e `sitemap.xml`
+- Alt text descritivo nas imagens
+- `loading="lazy"` fora do hero; `fetchpriority="high"` no hero
+- Imagens WebP para hero e galeria; OG em JPG para compatibilidade social
+
+## Popup de agendamento
+
+O botão **Agendar montagem da TV** abre um formulário com validação. Ao submeter, os dados são enviados para o WhatsApp (`+351 932 504 112`) com mensagem pré-formatada.
+
+## Notas importantes
+
+- **Não colocar preços** no site sem estratégia comercial definida
+- **Não inventar reviews** nem depoimentos falsos
+- **Não usar links mortos** (`href="#"`) — redes sociais só quando existirem URLs reais
+- Substituir imagens de galeria por fotos reais dos trabalhos quando disponíveis
+
+## Performance
+
+- Hero em WebP (~58 KB)
+- Galeria em WebP (~7–10 KB por imagem)
+- Logo otimizado em PNG (~158 KB)
+- OG em JPG (~99 KB)
+- CSS e JS nativos, sem frameworks pesados
 
 ## Próximos passos recomendados
 
-1. Criar e otimizar Google Business Profile
-2. Substituir imagens de galeria por fotos reais dos trabalhos
-3. Pedir avaliações reais a clientes satisfeitos (só depois publicar no site)
+1. Adicionar fotos reais dos trabalhos na galeria
+2. Criar e otimizar Google Business Profile
+3. Pedir reviews reais a clientes satisfeitos (só publicar depois de existirem)
 4. Submeter `sitemap.xml` no Google Search Console
-5. Criar páginas locais com conteúdo único (não copypaste):
-
+5. Criar páginas locais com conteúdo único (não copypaste), por exemplo:
    - `/montagem-tv-lisboa/`
    - `/montagem-tv-odivelas/`
    - `/montagem-tv-amadora/`
@@ -59,21 +76,10 @@ Lisboa, Grande Lisboa, Odivelas, Loures, Amadora, Sintra, Cascais, Almada, Seixa
    - `/montagem-tv-almada/`
    - `/montagem-tv-seixal/`
 
-## Estrutura do projeto
+## Exportação local para revisão
 
-```
-index.html
-styles.css
-script.js
-assets/
-CNAME
-robots.txt
-sitemap.xml
+```bash
+npm run export:review
 ```
 
-## Notas de performance
-
-- Hero image com `fetchpriority="high"` (sem lazy loading)
-- Imagens abaixo da dobra com `loading="lazy"`
-- Sem bibliotecas JavaScript pesadas
-- CSS e JS nativos e leves
+Gera `review-export/CODIGO_COMPLETO_WALLFIXTV_REVIEW.md` (pasta ignorada pelo Git).
