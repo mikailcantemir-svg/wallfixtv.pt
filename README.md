@@ -89,9 +89,7 @@ Páginas de conteúdo na raiz do site, ligadas na secção **Artigos e Guias** d
 
 ## Popup de agendamento
 
-O botão **Agendar montagem da TV** abre um formulário com validação. Campos obrigatórios: nome, telefone, localidade, data, hora e tamanho da TV. Ao submeter, os dados são enviados para o WhatsApp (`+351 932 504 112`) com mensagem pré-formatada.
-
-Não existe checkbox de consentimento RGPD no formulário — adicionar quando a política de privacidade estiver com dados legais finais.
+O botão **Agendar montagem da TV** abre um formulário com validação. Campos obrigatórios: nome, telefone, localidade, data, hora, tamanho da TV e aceitação da Política de Privacidade (RGPD). Ao submeter, os dados são enviados para o WhatsApp (`+351 932 504 112`) com mensagem pré-formatada.
 
 ## Notas importantes
 

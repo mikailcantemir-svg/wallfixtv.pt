@@ -145,26 +145,26 @@
       <div class="header-actions">
         <div class="language-dropdown">
           <button class="language-toggle" type="button" aria-label="Choisir la langue" aria-expanded="false">
-            <span class="flag">🇫🇷</span>
+            <img class="flag" src="../assets/flags/fr.svg" alt="" width="22" height="16" aria-hidden="true">
             <span class="language-code">FR</span>
             <span class="language-arrow">▾</span>
           </button>
 
           <div class="language-menu" role="menu">
             <a href="../" role="menuitem" hreflang="pt-PT">
-              <span class="flag">🇵🇹</span>
+              <img class="flag" src="../assets/flags/pt.svg" alt="" width="22" height="16" aria-hidden="true">
               <span>Português</span>
             </a>
             <a href="../en/" role="menuitem" hreflang="en">
-              <span class="flag">🇬🇧</span>
+              <img class="flag" src="../assets/flags/gb.svg" alt="" width="22" height="16" aria-hidden="true">
               <span>English</span>
             </a>
             <a href="../es/" role="menuitem" hreflang="es">
-              <span class="flag">🇪🇸</span>
+              <img class="flag" src="../assets/flags/es.svg" alt="" width="22" height="16" aria-hidden="true">
               <span>Español</span>
             </a>
             <a href="./" class="active" role="menuitem" hreflang="fr">
-              <span class="flag">🇫🇷</span>
+              <img class="flag" src="../assets/flags/fr.svg" alt="" width="22" height="16" aria-hidden="true">
               <span>Français</span>
             </a>
           </div>
@@ -402,11 +402,12 @@
         </header>
 
         <div class="gallery-grid">
-          <img src="../assets/images/trabalho-tv-1.webp" alt="Fixation de TV au mur dans un salon moderne" width="400" height="260" loading="lazy" />
-          <img src="../assets/images/trabalho-tv-2.webp" alt="Installation de support articulé pour TV" width="400" height="260" loading="lazy" />
-          <img src="../assets/images/trabalho-tv-3.webp" alt="Gestion des câbles après fixation de TV" width="400" height="260" loading="lazy" />
-          <img src="../assets/images/trabalho-tv-4.webp" alt="TV installée sur mur en placo" width="400" height="260" loading="lazy" />
-          <img src="../assets/images/trabalho-tv-5.webp" alt="TV fixée sur mur en béton" width="400" height="260" loading="lazy" />
+          <img src="../assets/images/trabalho-tv-1.jpg" alt="TV fixée au mur d'une chambre — installation terminée à Lisbonne" width="400" height="260" loading="lazy" />
+          <img src="../assets/images/trabalho-tv-2.jpg" alt="Préparation de fixation TV avec niveau laser pour un alignement parfait" width="400" height="260" loading="lazy" />
+          <img src="../assets/images/trabalho-tv-3.jpg" alt="Téléviseur fixé sur mur blanc après installation professionnelle" width="400" height="260" loading="lazy" />
+          <img src="../assets/images/trabalho-tv-4.jpg" alt="TV fixée dans bureau à domicile au-dessus d'un bureau" width="400" height="260" loading="lazy" />
+          <img src="../assets/images/trabalho-tv-5.jpg" alt="Fixation de grande TV au mur dans un salon" width="400" height="260" loading="lazy" />
+          <img src="../assets/images/trabalho-tv-6.jpg" alt="Installation de TV au mur dans salon moderne avec barre de son" width="400" height="260" loading="lazy" />
         </div>
 
         <div class="gallery-action">
@@ -502,7 +503,13 @@
 
     <div class="copyright">
       <div class="container">
-        <p>© 2024 WallFixTV.pt — Tous droits réservés. <a href="../politica-privacidade.html">Politique de Confidentialité</a></p>
+        <p>
+          © 2024–<span id="currentYear"></span> WallFixTV.pt — Tous droits réservés.
+          <a href="../politica-privacidade.html">Politique de Confidentialité</a>
+        </p>
+        <p class="footer-legal">
+          WallFixTV.pt é um serviço prestado por Mihail Cantemir — Empresário em Nome Individual. NIF: 267285752.
+        </p>
       </div>
     </div>
   </footer>
@@ -564,7 +571,7 @@
       "telephone": "+351932504112",
       "contactType": "customer service",
       "areaServed": "PT",
-      "availableLanguage": ["Portuguese", "English", "Spanish", "French", "Romanian"]
+      "availableLanguage": ["Portuguese", "English", "Spanish", "French"]
     }
   }
   </script>
@@ -718,6 +725,13 @@
           </ul>
         </aside>
 
+        <div class="schedule-field schedule-consent">
+          <label class="schedule-consent-label" for="schedulePrivacy">
+            <input type="checkbox" id="schedulePrivacy" name="privacy" required />
+            <span>J'ai lu et j'accepte la <a href="../politica-privacidade.html" target="_blank" rel="noopener noreferrer">Politique de Confidentialité</a> et j'autorise le traitement de mes données pour répondre à ma demande.</span>
+          </label>
+        </div>
+
         <p class="schedule-error" id="scheduleError" role="alert" hidden>Veuillez remplir tous les champs obligatoires.</p>
 
         <div class="schedule-actions">
@@ -731,7 +745,7 @@
     </div>
   </div>
 
-  <script>window.WALLFIXTV_I18N = {"scheduleIntro":"Bonjour, je souhaiterais planifier une installation de TV au mur.","scheduleFieldLabels":{"name":"Nom","phone":"Contact","location":"Localité","date":"Date souhaitée","time":"Heure souhaitée","tvSize":"Taille de la TV","wall":"Type de mur","support":"Type de support","cables":"Gestion des câbles","notes":"Remarques"},"scheduleClosing":"Merci de confirmer la disponibilité. Merci.","error":"Veuillez remplir tous les champs obligatoires.","quote":"Bonjour, je souhaiterais demander un devis pour la fixation de TV au mur."};</script>
+  <script>window.WALLFIXTV_I18N = {"scheduleIntro":"Bonjour, je souhaiterais planifier une installation de TV au mur.","scheduleFieldLabels":{"name":"Nom","phone":"Contact","location":"Localité","date":"Date souhaitée","time":"Heure souhaitée","tvSize":"Taille de la TV","wall":"Type de mur","support":"Type de support","cables":"Gestion des câbles","notes":"Remarques"},"scheduleClosing":"Merci de confirmer la disponibilité. Merci.","error":"Veuillez remplir tous les champs obligatoires.","privacyError":"Veuillez accepter la Politique de Confidentialité pour continuer.","quote":"Bonjour, je souhaiterais demander un devis pour la fixation de TV au mur."};</script>
   <script src="../script.js"></script>
 </body>
 </html>

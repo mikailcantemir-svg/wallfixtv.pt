@@ -145,26 +145,26 @@
       <div class="header-actions">
         <div class="language-dropdown">
           <button class="language-toggle" type="button" aria-label="Seleccionar idioma" aria-expanded="false">
-            <span class="flag">🇪🇸</span>
+            <img class="flag" src="../assets/flags/es.svg" alt="" width="22" height="16" aria-hidden="true">
             <span class="language-code">ES</span>
             <span class="language-arrow">▾</span>
           </button>
 
           <div class="language-menu" role="menu">
             <a href="../" role="menuitem" hreflang="pt-PT">
-              <span class="flag">🇵🇹</span>
+              <img class="flag" src="../assets/flags/pt.svg" alt="" width="22" height="16" aria-hidden="true">
               <span>Português</span>
             </a>
             <a href="../en/" role="menuitem" hreflang="en">
-              <span class="flag">🇬🇧</span>
+              <img class="flag" src="../assets/flags/gb.svg" alt="" width="22" height="16" aria-hidden="true">
               <span>English</span>
             </a>
             <a href="./" class="active" role="menuitem" hreflang="es">
-              <span class="flag">🇪🇸</span>
+              <img class="flag" src="../assets/flags/es.svg" alt="" width="22" height="16" aria-hidden="true">
               <span>Español</span>
             </a>
             <a href="../fr/" role="menuitem" hreflang="fr">
-              <span class="flag">🇫🇷</span>
+              <img class="flag" src="../assets/flags/fr.svg" alt="" width="22" height="16" aria-hidden="true">
               <span>Français</span>
             </a>
           </div>
@@ -402,11 +402,12 @@
         </header>
 
         <div class="gallery-grid">
-          <img src="../assets/images/trabalho-tv-1.webp" alt="Montaje de TV en la pared en salón moderno" width="400" height="260" loading="lazy" />
-          <img src="../assets/images/trabalho-tv-2.webp" alt="Instalación de soporte articulado para TV" width="400" height="260" loading="lazy" />
-          <img src="../assets/images/trabalho-tv-3.webp" alt="Organización de cables tras montaje de TV" width="400" height="260" loading="lazy" />
-          <img src="../assets/images/trabalho-tv-4.webp" alt="TV instalada en pared de pladur" width="400" height="260" loading="lazy" />
-          <img src="../assets/images/trabalho-tv-5.webp" alt="TV montada en pared de hormigón" width="400" height="260" loading="lazy" />
+          <img src="../assets/images/trabalho-tv-1.jpg" alt="TV montada en pared de dormitorio — instalación completada en Lisboa" width="400" height="260" loading="lazy" />
+          <img src="../assets/images/trabalho-tv-2.jpg" alt="Preparación de montaje de TV con nivel láser para alineación perfecta" width="400" height="260" loading="lazy" />
+          <img src="../assets/images/trabalho-tv-3.jpg" alt="Televisión fijada en pared blanca tras instalación profesional" width="400" height="260" loading="lazy" />
+          <img src="../assets/images/trabalho-tv-4.jpg" alt="TV montada en oficina en casa sobre escritorio" width="400" height="260" loading="lazy" />
+          <img src="../assets/images/trabalho-tv-5.jpg" alt="Montaje de TV grande en salón con soporte en pared" width="400" height="260" loading="lazy" />
+          <img src="../assets/images/trabalho-tv-6.jpg" alt="Instalación de TV en pared en salón moderno con barra de sonido" width="400" height="260" loading="lazy" />
         </div>
 
         <div class="gallery-action">
@@ -502,7 +503,13 @@
 
     <div class="copyright">
       <div class="container">
-        <p>© 2024 WallFixTV.pt — Todos los derechos reservados. <a href="../politica-privacidade.html">Política de Privacidad</a></p>
+        <p>
+          © 2024–<span id="currentYear"></span> WallFixTV.pt — Todos los derechos reservados.
+          <a href="../politica-privacidade.html">Política de Privacidad</a>
+        </p>
+        <p class="footer-legal">
+          WallFixTV.pt é um serviço prestado por Mihail Cantemir — Empresário em Nome Individual. NIF: 267285752.
+        </p>
       </div>
     </div>
   </footer>
@@ -564,7 +571,7 @@
       "telephone": "+351932504112",
       "contactType": "customer service",
       "areaServed": "PT",
-      "availableLanguage": ["Portuguese", "English", "Spanish", "French", "Romanian"]
+      "availableLanguage": ["Portuguese", "English", "Spanish", "French"]
     }
   }
   </script>
@@ -718,6 +725,13 @@
           </ul>
         </aside>
 
+        <div class="schedule-field schedule-consent">
+          <label class="schedule-consent-label" for="schedulePrivacy">
+            <input type="checkbox" id="schedulePrivacy" name="privacy" required />
+            <span>He leído y acepto la <a href="../politica-privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidad</a> y autorizo el tratamiento de mis datos para responder a mi solicitud.</span>
+          </label>
+        </div>
+
         <p class="schedule-error" id="scheduleError" role="alert" hidden>Complete todos los campos obligatorios.</p>
 
         <div class="schedule-actions">
@@ -731,7 +745,7 @@
     </div>
   </div>
 
-  <script>window.WALLFIXTV_I18N = {"scheduleIntro":"Hola, me gustaría agendar una instalación de TV en la pared.","scheduleFieldLabels":{"name":"Nombre","phone":"Contacto","location":"Localidad","date":"Fecha deseada","time":"Hora deseada","tvSize":"Tamaño de la TV","wall":"Tipo de pared","support":"Tipo de soporte","cables":"Organización de cables","notes":"Observaciones"},"scheduleClosing":"Por favor confirme disponibilidad. Gracias.","error":"Complete todos los campos obligatorios.","quote":"Hola, me gustaría pedir un presupuesto para montaje de TV en la pared."};</script>
+  <script>window.WALLFIXTV_I18N = {"scheduleIntro":"Hola, me gustaría agendar una instalación de TV en la pared.","scheduleFieldLabels":{"name":"Nombre","phone":"Contacto","location":"Localidad","date":"Fecha deseada","time":"Hora deseada","tvSize":"Tamaño de la TV","wall":"Tipo de pared","support":"Tipo de soporte","cables":"Organización de cables","notes":"Observaciones"},"scheduleClosing":"Por favor confirme disponibilidad. Gracias.","error":"Complete todos los campos obligatorios.","privacyError":"Acepte la Política de Privacidad para continuar.","quote":"Hola, me gustaría pedir un presupuesto para montaje de TV en la pared."};</script>
   <script src="../script.js"></script>
 </body>
 </html>

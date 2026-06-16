@@ -1,7 +1,10 @@
 # Exportação local para revisão (nunca publicar)
 review-export/
 CODIGO_COMPLETO_WALLFIXTV_REVIEW.md
+CODIGO_COMPLETO_WALLFIXTV_REVIEW*.md
 *.review.md
+*.zip
+backup-ai-files/
 
 # Ferramentas locais de otimização de imagens
 scripts/tools/

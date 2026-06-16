@@ -105,6 +105,11 @@
       if (!field) return;
       field.classList.toggle("is-invalid", !field.value.trim());
     });
+
+    const privacyCheckbox = document.getElementById("schedulePrivacy");
+    if (privacyCheckbox) {
+      privacyCheckbox.classList.toggle("is-invalid", !privacyCheckbox.checked);
+    }
   }
 
   function buildWhatsAppMessage() {
@@ -165,11 +170,23 @@
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
+    const i18n = window.WALLFIXTV_I18N || {};
+    const privacyCheckbox = document.getElementById("schedulePrivacy");
+
+    if (privacyCheckbox && !privacyCheckbox.checked) {
+      markInvalidFields();
+      if (errorBox) {
+        errorBox.hidden = false;
+        errorBox.textContent =
+          i18n.privacyError || "Aceite a Política de Privacidade para continuar.";
+      }
+      return;
+    }
+
     if (!form.checkValidity()) {
       markInvalidFields();
       if (errorBox) {
         errorBox.hidden = false;
-        const i18n = window.WALLFIXTV_I18N || {};
         if (i18n.error) errorBox.textContent = i18n.error;
       }
       form.reportValidity();
@@ -185,15 +202,34 @@
 
   form.addEventListener("input", () => {
     if (errorBox && form.checkValidity()) {
-      errorBox.hidden = true;
+      const privacyCheckbox = document.getElementById("schedulePrivacy");
+      if (!privacyCheckbox || privacyCheckbox.checked) {
+        errorBox.hidden = true;
+      }
     }
 
     form.querySelectorAll(".is-invalid").forEach((field) => {
+      if (field.type === "checkbox") {
+        if (field.checked) field.classList.remove("is-invalid");
+        return;
+      }
       if (field.value.trim()) {
         field.classList.remove("is-invalid");
       }
     });
   });
+
+  const privacyCheckbox = document.getElementById("schedulePrivacy");
+  if (privacyCheckbox) {
+    privacyCheckbox.addEventListener("change", () => {
+      if (privacyCheckbox.checked) {
+        privacyCheckbox.classList.remove("is-invalid");
+        if (errorBox && form.checkValidity()) {
+          errorBox.hidden = true;
+        }
+      }
+    });
+  }
 })();
 
 const currentYear = document.getElementById("currentYear");

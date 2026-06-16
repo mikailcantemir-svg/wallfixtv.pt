@@ -15,10 +15,10 @@ const HREFLANG = {
 };
 
 const LANG_UI = {
-  pt: { flag: "🇵🇹", code: "PT", label: "Português" },
-  en: { flag: "🇬🇧", code: "EN", label: "English" },
-  es: { flag: "🇪🇸", code: "ES", label: "Español" },
-  fr: { flag: "🇫🇷", code: "FR", label: "Français" },
+  pt: { flagKey: "pt", code: "PT", label: "Português" },
+  en: { flagKey: "gb", code: "EN", label: "English" },
+  es: { flagKey: "es", code: "ES", label: "Español" },
+  fr: { flagKey: "fr", code: "FR", label: "Français" },
 };
 
 const WHY_ICONS = [
@@ -43,11 +43,12 @@ const PROCESS_ICONS = [
 ];
 
 const GALLERY_IMAGES = [
-  "assets/images/trabalho-tv-1.webp",
-  "assets/images/trabalho-tv-2.webp",
-  "assets/images/trabalho-tv-3.webp",
-  "assets/images/trabalho-tv-4.webp",
-  "assets/images/trabalho-tv-5.webp",
+  "assets/images/trabalho-tv-1.jpg",
+  "assets/images/trabalho-tv-2.jpg",
+  "assets/images/trabalho-tv-3.jpg",
+  "assets/images/trabalho-tv-4.jpg",
+  "assets/images/trabalho-tv-5.jpg",
+  "assets/images/trabalho-tv-6.jpg",
 ];
 
 const SVG_SPRITE = `  <svg class="svg-sprite" aria-hidden="true" focusable="false" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none;">
@@ -159,6 +160,11 @@ function assetPath(langKey, relativePath) {
   return `${assetPrefix(langKey)}${relativePath}`;
 }
 
+function flagImg(langKey, flagKey) {
+  const src = assetPath(langKey, `assets/flags/${flagKey}.svg`);
+  return `<img class="flag" src="${src}" alt="" width="22" height="16" aria-hidden="true">`;
+}
+
 function langPageHref(currentKey, targetKey) {
   if (targetKey === "pt") {
     return currentKey === "pt" ? "./" : "../";
@@ -191,14 +197,14 @@ function buildLanguageSwitcher(activeKey) {
     const activeClass = key === activeKey ? ' class="active"' : "";
     const label = ui.label;
     return `            <a href="${href}"${activeClass} role="menuitem" hreflang="${HREFLANG[key]}">
-              <span class="flag">${ui.flag}</span>
+              ${flagImg(activeKey, ui.flagKey)}
               <span>${escapeHtml(label)}</span>
             </a>`;
   }).join("\n");
 
   return `        <div class="language-dropdown">
           <button class="language-toggle" type="button" aria-label="${aria}" aria-expanded="false">
-            <span class="flag">${active.flag}</span>
+            ${flagImg(activeKey, active.flagKey)}
             <span class="language-code">${active.code}</span>
             <span class="language-arrow">▾</span>
           </button>
@@ -226,9 +232,20 @@ function buildI18nScript(t) {
     scheduleFieldLabels: t.whatsapp.scheduleFieldLabels,
     scheduleClosing: t.whatsapp.scheduleClosing,
     error: t.modal.error,
+    privacyError: t.modal.privacyError,
     quote: t.whatsapp.quote,
   };
   return `  <script>window.WALLFIXTV_I18N = ${JSON.stringify(payload)};</script>`;
+}
+
+function buildPrivacyConsent(langKey, t) {
+  const href = langKey === "pt" ? "politica-privacidade.html" : "../politica-privacidade.html";
+  return `        <div class="schedule-field schedule-consent">
+          <label class="schedule-consent-label" for="schedulePrivacy">
+            <input type="checkbox" id="schedulePrivacy" name="privacy" required />
+            <span>${escapeHtml(t.modal.privacyConsentBefore)}<a href="${href}" target="_blank" rel="noopener noreferrer">${escapeHtml(t.modal.privacyLinkText)}</a>${escapeHtml(t.modal.privacyConsentAfter)}</span>
+          </label>
+        </div>`;
 }
 
 function buildLocalBusinessJsonLd(t) {
@@ -274,7 +291,7 @@ ${offers}
       "telephone": "+351932504112",
       "contactType": "customer service",
       "areaServed": "PT",
-      "availableLanguage": ["Portuguese", "English", "Spanish", "French", "Romanian"]
+      "availableLanguage": ["Portuguese", "English", "Spanish", "French"]
     }
   }
   </script>`;
@@ -635,7 +652,13 @@ ${faqItems}
 
     <div class="copyright">
       <div class="container">
-        <p>${escapeHtml(t.footer.copyright)} <a href="${prefix}politica-privacidade.html">${escapeHtml(t.footer.privacyLink)}</a></p>
+        <p>
+          © 2024–<span id="currentYear"></span> WallFixTV.pt — ${escapeHtml(t.footer.copyrightSuffix)}
+          <a href="${prefix}politica-privacidade.html">${escapeHtml(t.footer.privacyLink)}</a>
+        </p>
+        <p class="footer-legal">
+          WallFixTV.pt é um serviço prestado por Mihail Cantemir — Empresário em Nome Individual. NIF: 267285752.
+        </p>
       </div>
     </div>
   </footer>
@@ -719,6 +742,8 @@ ${buildSelectOptions(t.modal.cableOptions, t.modal.selectPlaceholder)}
 ${modalInfoItems}
           </ul>
         </aside>
+
+${buildPrivacyConsent(langKey, t)}
 
         <p class="schedule-error" id="scheduleError" role="alert" hidden>${escapeHtml(t.modal.error)}</p>
 

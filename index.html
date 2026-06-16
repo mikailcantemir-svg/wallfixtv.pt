@@ -146,26 +146,26 @@
       <div class="header-actions">
         <div class="language-dropdown">
           <button class="language-toggle" type="button" aria-label="Selecionar idioma" aria-expanded="false">
-            <span class="flag">🇵🇹</span>
+            <img class="flag" src="assets/flags/pt.svg" alt="" width="22" height="16" aria-hidden="true">
             <span class="language-code">PT</span>
             <span class="language-arrow">▾</span>
           </button>
 
           <div class="language-menu" role="menu">
             <a href="./" class="active" role="menuitem" hreflang="pt-PT">
-              <span class="flag">🇵🇹</span>
+              <img class="flag" src="assets/flags/pt.svg" alt="" width="22" height="16" aria-hidden="true">
               <span>Português</span>
             </a>
             <a href="en/" role="menuitem" hreflang="en">
-              <span class="flag">🇬🇧</span>
+              <img class="flag" src="assets/flags/gb.svg" alt="" width="22" height="16" aria-hidden="true">
               <span>English</span>
             </a>
             <a href="es/" role="menuitem" hreflang="es">
-              <span class="flag">🇪🇸</span>
+              <img class="flag" src="assets/flags/es.svg" alt="" width="22" height="16" aria-hidden="true">
               <span>Español</span>
             </a>
             <a href="fr/" role="menuitem" hreflang="fr">
-              <span class="flag">🇫🇷</span>
+              <img class="flag" src="assets/flags/fr.svg" alt="" width="22" height="16" aria-hidden="true">
               <span>Français</span>
             </a>
           </div>
@@ -403,11 +403,12 @@
         </header>
 
         <div class="gallery-grid">
-          <img src="./assets/images/trabalho-tv-1.webp" alt="Montagem de TV na parede em sala moderna" width="400" height="260" loading="lazy" />
-          <img src="./assets/images/trabalho-tv-2.webp" alt="Instalação de suporte articulado para TV" width="400" height="260" loading="lazy" />
-          <img src="./assets/images/trabalho-tv-3.webp" alt="Organização de cabos após montagem de TV" width="400" height="260" loading="lazy" />
-          <img src="./assets/images/trabalho-tv-4.webp" alt="TV instalada em parede de pladur" width="400" height="260" loading="lazy" />
-          <img src="./assets/images/trabalho-tv-5.webp" alt="TV montada em parede de betão" width="400" height="260" loading="lazy" />
+          <img src="./assets/images/trabalho-tv-1.jpg" alt="TV montada na parede de quarto — montagem concluída em Lisboa" width="400" height="260" loading="lazy" />
+          <img src="./assets/images/trabalho-tv-2.jpg" alt="Preparação de montagem de TV com nível laser para alinhamento perfeito" width="400" height="260" loading="lazy" />
+          <img src="./assets/images/trabalho-tv-3.jpg" alt="Televisão fixada em parede branca após instalação profissional" width="400" height="260" loading="lazy" />
+          <img src="./assets/images/trabalho-tv-4.jpg" alt="TV montada em escritório doméstico acima de secretária" width="400" height="260" loading="lazy" />
+          <img src="./assets/images/trabalho-tv-5.jpg" alt="Montagem de TV grande em sala com suporte na parede" width="400" height="260" loading="lazy" />
+          <img src="./assets/images/trabalho-tv-6.jpg" alt="Instalação de TV na parede em sala moderna com soundbar" width="400" height="260" loading="lazy" />
         </div>
 
         <div class="gallery-action">
@@ -613,7 +614,7 @@
       "telephone": "+351932504112",
       "contactType": "customer service",
       "areaServed": "PT",
-      "availableLanguage": ["Portuguese", "English", "Spanish", "French", "Romanian"]
+      "availableLanguage": ["Portuguese", "English", "Spanish", "French"]
     }
   }
   </script>
@@ -767,6 +768,13 @@
           </ul>
         </aside>
 
+        <div class="schedule-field schedule-consent">
+          <label class="schedule-consent-label" for="schedulePrivacy">
+            <input type="checkbox" id="schedulePrivacy" name="privacy" required />
+            <span>Li e aceito a <a href="politica-privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a> e autorizo o tratamento dos meus dados para resposta ao meu pedido.</span>
+          </label>
+        </div>
+
         <p class="schedule-error" id="scheduleError" role="alert" hidden>Preencha todos os campos obrigatórios.</p>
 
         <div class="schedule-actions">
@@ -780,7 +788,7 @@
     </div>
   </div>
 
-  <script>window.WALLFIXTV_I18N = {"scheduleIntro":"Olá, gostaria de agendar uma instalação de TV na parede.","scheduleFieldLabels":{"name":"Nome","phone":"Contacto","location":"Localidade","date":"Data pretendida","time":"Hora pretendida","tvSize":"Tamanho da TV","wall":"Tipo de parede","support":"Tipo de suporte","cables":"Organização de cabos","notes":"Observações"},"scheduleClosing":"Por favor confirme disponibilidade. Obrigado.","error":"Preencha todos os campos obrigatórios.","quote":"Olá, gostaria de pedir um orçamento para montagem de TV na parede."};</script>
+  <script>window.WALLFIXTV_I18N = {"scheduleIntro":"Olá, gostaria de agendar uma instalação de TV na parede.","scheduleFieldLabels":{"name":"Nome","phone":"Contacto","location":"Localidade","date":"Data pretendida","time":"Hora pretendida","tvSize":"Tamanho da TV","wall":"Tipo de parede","support":"Tipo de suporte","cables":"Organização de cabos","notes":"Observações"},"scheduleClosing":"Por favor confirme disponibilidade. Obrigado.","error":"Preencha todos os campos obrigatórios.","privacyError":"Aceite a Política de Privacidade para continuar.","quote":"Olá, gostaria de pedir um orçamento para montagem de TV na parede."};</script>
   <script src="./script.js"></script>
 </body>
 </html>
