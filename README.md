@@ -3,7 +3,8 @@
 Site institucional de montagem de TV na parede, suportes fixos/articulados, organização de cabos e instalação em pladur, tijolo e betão.
 
 **Domínio:** https://www.wallfixtv.pt/  
-**WhatsApp:** +351 932 504 112
+**WhatsApp:** +351 932 504 112  
+**Telefone:** +351 932 504 112
 
 ## Descrição do projeto
 
@@ -12,22 +13,48 @@ Site estático, responsivo e otimizado para SEO local, focado em converter visit
 ## Estrutura de ficheiros
 
 ```
-index.html          # Página principal
-styles.css          # Estilos e layout responsivo
-script.js           # Menu mobile, navegação ativa e popup de agendamento
-robots.txt          # Instruções para motores de busca
-sitemap.xml         # Mapa do site
-CNAME               # www.wallfixtv.pt
+index.html                  # Página principal
+politica-privacidade.html   # Política de privacidade
+styles.css                  # Estilos e layout responsivo
+script.js                   # Menu mobile, navegação ativa e popup de agendamento
+robots.txt                  # Instruções para motores de busca
+sitemap.xml                 # Mapa do site
+CNAME                       # www.wallfixtv.pt
 README.md
-package.json        # Script local de exportação para revisão
+package.json                # Script local de exportação para revisão
 scripts/
   export-review-code.js
   optimize-assets.ps1
 assets/
-  images/           # Hero, galeria e imagem OG
-  icons/            # Ícones de serviços e processo
-  logos/            # Logótipo
+  images/                   # Hero, galeria e imagem OG
+  icons/                    # Ícones de serviços e processo
+  logos/                    # Logótipo
 ```
+
+## Hero atualizado
+
+O H1 do hero usa tipografia moderna (sem fonte manuscrita):
+
+- Linha 1: «Montagem de TV na Parede» — azul escuro `#071d35`
+- Linha 2: «segura, alinhada e sem cabos à vista» — `.hero-highlight` em `#075fc7`
+
+A classe `.accent-text` substitui o antigo estilo manuscrito nas secções com destaque azul.
+
+## Secção «Porque escolher»
+
+A secção `#vantagens` (barra azul escura com 5 blocos e ícones) foi **mantida sem alterações** nesta revisão.
+
+## Avaliações
+
+Não existe secção de testemunhos no `index.html`. **Não publicar** avaliações fictícias, estrelas falsas ou «Cliente exemplo». Quando houver reviews reais, ativar uma secção dedicada.
+
+## Política de Privacidade
+
+Ficheiro: `politica-privacidade.html`
+
+**Falta preencher nome legal e NIF antes de publicar** a versão final. O ficheiro inclui comentários no código para esse preenchimento. Não inventar dados legais.
+
+Email `geral@wallfixtv.pt` **não está publicado** até confirmação de que a caixa existe.
 
 ## SEO aplicado
 
@@ -44,7 +71,9 @@ assets/
 
 ## Popup de agendamento
 
-O botão **Agendar montagem da TV** abre um formulário com validação. Ao submeter, os dados são enviados para o WhatsApp (`+351 932 504 112`) com mensagem pré-formatada.
+O botão **Agendar montagem da TV** abre um formulário com validação. Campos obrigatórios: nome, telefone, localidade, data, hora e tamanho da TV. Ao submeter, os dados são enviados para o WhatsApp (`+351 932 504 112`) com mensagem pré-formatada.
+
+Não existe checkbox de consentimento RGPD no formulário — adicionar quando a política de privacidade estiver com dados legais finais.
 
 ## Notas importantes
 
@@ -63,11 +92,12 @@ O botão **Agendar montagem da TV** abre um formulário com validação. Ao subm
 
 ## Próximos passos recomendados
 
-1. Adicionar fotos reais dos trabalhos na galeria
-2. Criar e otimizar Google Business Profile
-3. Pedir reviews reais a clientes satisfeitos (só publicar depois de existirem)
-4. Submeter `sitemap.xml` no Google Search Console
-5. Criar páginas locais com conteúdo único (não copypaste), por exemplo:
+1. Preencher nome legal e NIF na Política de Privacidade
+2. Adicionar fotos reais dos trabalhos na galeria
+3. Criar e otimizar Google Business Profile
+4. Pedir reviews reais a clientes satisfeitos (só publicar depois de existirem)
+5. Submeter `sitemap.xml` no Google Search Console
+6. Criar páginas locais com conteúdo único (não copypaste), por exemplo:
    - `/montagem-tv-lisboa/`
    - `/montagem-tv-odivelas/`
    - `/montagem-tv-amadora/`

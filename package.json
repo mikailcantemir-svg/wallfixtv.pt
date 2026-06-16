@@ -3,6 +3,7 @@
   "private": true,
   "description": "Site WallFixTV.pt — montagem de TV na parede",
   "scripts": {
-    "export:review": "node scripts/export-review-code.js"
+    "export:review": "node scripts/export-review-code.js",
+    "generate:i18n": "node scripts/generate-i18n-pages.js"
   }
 }

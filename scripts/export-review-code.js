@@ -6,7 +6,12 @@ const OUT_DIR = path.join(ROOT, "review-export");
 const OUT_FILE = path.join(OUT_DIR, "CODIGO_COMPLETO_WALLFIXTV_REVIEW.md");
 
 const MAIN_FILES = [
+  { file: "politica-privacidade.html", lang: "html" },
   { file: "index.html", lang: "html" },
+  { file: "en/index.html", lang: "html" },
+  { file: "es/index.html", lang: "html" },
+  { file: "fr/index.html", lang: "html" },
+  { file: "ro/index.html", lang: "html" },
   { file: "styles.css", lang: "css" },
   { file: "script.js", lang: "javascript" },
   { file: "sitemap.xml", lang: "xml" },

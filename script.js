@@ -108,21 +108,37 @@
   }
 
   function buildWhatsAppMessage() {
+    const i18n = window.WALLFIXTV_I18N || {};
+    const labels = i18n.scheduleFieldLabels || {
+      name: "Nome",
+      phone: "Contacto",
+      location: "Localidade",
+      date: "Data pretendida",
+      time: "Hora pretendida",
+      tvSize: "Tamanho da TV",
+      wall: "Tipo de parede",
+      support: "Tipo de suporte",
+      cables: "Organização de cabos",
+      notes: "Observações",
+    };
+    const intro = i18n.scheduleIntro || "Olá, gostaria de agendar uma instalação de TV na parede.";
+    const closing = i18n.scheduleClosing || "Por favor confirme disponibilidade. Obrigado.";
+
     return [
-      "Olá, gostaria de agendar uma instalação de TV na parede.",
+      intro,
       "",
-      "Nome: " + getFieldValue("scheduleName"),
-      "Contacto: " + getFieldValue("schedulePhone"),
-      "Localidade: " + getFieldValue("scheduleLocation"),
-      "Data pretendida: " + getFieldValue("scheduleDate"),
-      "Hora pretendida: " + getFieldValue("scheduleTime"),
-      "Tamanho da TV: " + getFieldValue("scheduleTvSize"),
-      "Tipo de parede: " + getFieldValue("scheduleWall"),
-      "Tipo de suporte: " + getFieldValue("scheduleSupport"),
-      "Organização de cabos: " + getFieldValue("scheduleCables"),
-      "Observações: " + getFieldValue("scheduleNotes"),
+      labels.name + ": " + getFieldValue("scheduleName"),
+      labels.phone + ": " + getFieldValue("schedulePhone"),
+      labels.location + ": " + getFieldValue("scheduleLocation"),
+      labels.date + ": " + getFieldValue("scheduleDate"),
+      labels.time + ": " + getFieldValue("scheduleTime"),
+      labels.tvSize + ": " + getFieldValue("scheduleTvSize"),
+      labels.wall + ": " + getFieldValue("scheduleWall"),
+      labels.support + ": " + getFieldValue("scheduleSupport"),
+      labels.cables + ": " + getFieldValue("scheduleCables"),
+      labels.notes + ": " + getFieldValue("scheduleNotes"),
       "",
-      "Por favor confirme disponibilidade. Obrigado.",
+      closing,
     ].join("\n");
   }
 
@@ -151,7 +167,11 @@
 
     if (!form.checkValidity()) {
       markInvalidFields();
-      if (errorBox) errorBox.hidden = false;
+      if (errorBox) {
+        errorBox.hidden = false;
+        const i18n = window.WALLFIXTV_I18N || {};
+        if (i18n.error) errorBox.textContent = i18n.error;
+      }
       form.reportValidity();
       return;
     }
