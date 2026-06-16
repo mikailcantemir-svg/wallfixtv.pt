@@ -195,3 +195,29 @@
     });
   });
 })();
+
+const currentYear = document.getElementById("currentYear");
+if (currentYear) {
+  currentYear.textContent = new Date().getFullYear();
+}
+
+document.querySelectorAll(".language-dropdown").forEach((dropdown) => {
+  const toggle = dropdown.querySelector(".language-toggle");
+
+  if (!toggle) return;
+
+  toggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const isOpen = dropdown.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+  });
+});

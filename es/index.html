@@ -11,7 +11,6 @@
   <link rel="alternate" hreflang="en" href="https://www.wallfixtv.pt/en/">
   <link rel="alternate" hreflang="es" href="https://www.wallfixtv.pt/es/">
   <link rel="alternate" hreflang="fr" href="https://www.wallfixtv.pt/fr/">
-  <link rel="alternate" hreflang="ro" href="https://www.wallfixtv.pt/ro/">
   <link rel="alternate" hreflang="x-default" href="https://www.wallfixtv.pt/">
 
   <meta name="robots" content="index, follow">
@@ -144,13 +143,32 @@
       </nav>
 
       <div class="header-actions">
-        <nav class="language-switcher" aria-label="Idioma">
-          <a href="../" hreflang="pt-PT">PT</a>
-          <a href="../en/" hreflang="en">EN</a>
-          <a href="./" class="active" hreflang="es">ES</a>
-          <a href="../fr/" hreflang="fr">FR</a>
-          <a href="../ro/" hreflang="ro">RO</a>
-        </nav>
+        <div class="language-dropdown">
+          <button class="language-toggle" type="button" aria-label="Seleccionar idioma" aria-expanded="false">
+            <span class="flag">🇪🇸</span>
+            <span class="language-code">ES</span>
+            <span class="language-arrow">▾</span>
+          </button>
+
+          <div class="language-menu" role="menu">
+            <a href="../" role="menuitem" hreflang="pt-PT">
+              <span class="flag">🇵🇹</span>
+              <span>Português</span>
+            </a>
+            <a href="../en/" role="menuitem" hreflang="en">
+              <span class="flag">🇬🇧</span>
+              <span>English</span>
+            </a>
+            <a href="./" class="active" role="menuitem" hreflang="es">
+              <span class="flag">🇪🇸</span>
+              <span>Español</span>
+            </a>
+            <a href="../fr/" role="menuitem" hreflang="fr">
+              <span class="flag">🇫🇷</span>
+              <span>Français</span>
+            </a>
+          </div>
+        </div>
         <a class="header-whatsapp" href="https://wa.me/351932504112?text=Hola%2C%20quiero%20montar%20una%20TV%20en%20la%20pared." target="_blank" rel="noopener noreferrer" aria-label="Contactar con WallFixTV por WhatsApp 932 504 112">
           <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
           <span class="header-whatsapp-number">932 504 112</span>

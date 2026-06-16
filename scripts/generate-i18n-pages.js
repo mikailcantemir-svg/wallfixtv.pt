@@ -6,13 +6,19 @@ const { LANGUAGES } = require("./i18n-data.js");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://www.wallfixtv.pt";
-const LANG_ORDER = ["pt", "en", "es", "fr", "ro"];
+const LANG_ORDER = ["pt", "en", "es", "fr"];
 const HREFLANG = {
   pt: "pt-PT",
   en: "en",
   es: "es",
   fr: "fr",
-  ro: "ro",
+};
+
+const LANG_UI = {
+  pt: { flag: "🇵🇹", code: "PT", label: "Português" },
+  en: { flag: "🇬🇧", code: "EN", label: "English" },
+  es: { flag: "🇪🇸", code: "ES", label: "Español" },
+  fr: { flag: "🇫🇷", code: "FR", label: "Français" },
 };
 
 const WHY_ICONS = [
@@ -177,16 +183,30 @@ function buildHreflangLinks() {
 }
 
 function buildLanguageSwitcher(activeKey) {
-  const links = LANG_ORDER.map((key) => {
-    const t = LANGUAGES[key];
+  const active = LANG_UI[activeKey];
+  const aria = escapeHtml(LANGUAGES[activeKey].header.langSwitcherAria);
+  const menuLinks = LANG_ORDER.map((key) => {
+    const ui = LANG_UI[key];
     const href = langPageHref(activeKey, key);
     const activeClass = key === activeKey ? ' class="active"' : "";
-    return `          <a href="${href}"${activeClass} hreflang="${HREFLANG[key]}">${t.activeLang}</a>`;
+    const label = ui.label;
+    return `            <a href="${href}"${activeClass} role="menuitem" hreflang="${HREFLANG[key]}">
+              <span class="flag">${ui.flag}</span>
+              <span>${escapeHtml(label)}</span>
+            </a>`;
   }).join("\n");
 
-  return `        <nav class="language-switcher" aria-label="${escapeHtml(LANGUAGES[activeKey].header.langSwitcherAria)}">
-${links}
-        </nav>`;
+  return `        <div class="language-dropdown">
+          <button class="language-toggle" type="button" aria-label="${aria}" aria-expanded="false">
+            <span class="flag">${active.flag}</span>
+            <span class="language-code">${active.code}</span>
+            <span class="language-arrow">▾</span>
+          </button>
+
+          <div class="language-menu" role="menu">
+${menuLinks}
+          </div>
+        </div>`;
 }
 
 function buildSelectOptions(options, placeholder) {

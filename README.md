@@ -13,9 +13,14 @@ Site estático, responsivo e otimizado para SEO local, focado em converter visit
 ## Estrutura de ficheiros
 
 ```
-index.html                  # Página principal
-politica-privacidade.html   # Política de privacidade
-styles.css                  # Estilos e layout responsivo
+index.html                        # Página principal
+politica-privacidade.html         # Política de privacidade
+montagem-tv-na-parede.html        # Artigo: guia de montagem
+suportes-articulados-tv.html      # Artigo: suportes articulados
+organizacao-cabos-tv.html         # Artigo: organização de cabos
+instalacao-tv-pladur-tijolo-betao.html  # Artigo: tipos de parede
+guia-tamanho-tv-sala-quarto.html  # Artigo: tamanho da TV por divisão
+styles.css                        # Estilos e layout responsivo
 script.js                   # Menu mobile, navegação ativa e popup de agendamento
 robots.txt                  # Instruções para motores de busca
 sitemap.xml                 # Mapa do site
@@ -52,9 +57,22 @@ Não existe secção de testemunhos no `index.html`. **Não publicar** avaliaç�
 
 Ficheiro: `politica-privacidade.html`
 
-**Falta preencher nome legal e NIF antes de publicar** a versão final. O ficheiro inclui comentários no código para esse preenchimento. Não inventar dados legais.
+Dados legais do responsável pelo tratamento (ENI, NIF e morada) estão publicados na página.
 
 Email `geral@wallfixtv.pt` **não está publicado** até confirmação de que a caixa existe.
+
+## Artigos e guias (SEO)
+
+Páginas de conteúdo na raiz do site, ligadas na secção **Artigos e Guias** da homepage:
+
+| URL | Tema |
+|-----|------|
+| `/montagem-tv-na-parede.html` | Guia completo de montagem |
+| `/suportes-articulados-tv.html` | Suportes articulados |
+| `/organizacao-cabos-tv.html` | Organização de cabos |
+| `/instalacao-tv-pladur-tijolo-betao.html` | Pladur, tijolo e betão |
+| `/guia-tamanho-tv-sala-quarto.html` | Tamanho da TV para sala ou quarto |
+| `/politica-privacidade.html` | Política de privacidade |
 
 ## SEO aplicado
 
@@ -92,12 +110,11 @@ Não existe checkbox de consentimento RGPD no formulário — adicionar quando a
 
 ## Próximos passos recomendados
 
-1. Preencher nome legal e NIF na Política de Privacidade
-2. Adicionar fotos reais dos trabalhos na galeria
-3. Criar e otimizar Google Business Profile
-4. Pedir reviews reais a clientes satisfeitos (só publicar depois de existirem)
-5. Submeter `sitemap.xml` no Google Search Console
-6. Criar páginas locais com conteúdo único (não copypaste), por exemplo:
+1. Adicionar fotos reais dos trabalhos na galeria
+2. Criar e otimizar Google Business Profile
+3. Pedir reviews reais a clientes satisfeitos (só publicar depois de existirem)
+4. Submeter `sitemap.xml` no Google Search Console
+5. Criar páginas locais com conteúdo único (não copypaste), por exemplo:
    - `/montagem-tv-lisboa/`
    - `/montagem-tv-odivelas/`
    - `/montagem-tv-amadora/`

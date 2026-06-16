@@ -11,7 +11,6 @@ const MAIN_FILES = [
   { file: "en/index.html", lang: "html" },
   { file: "es/index.html", lang: "html" },
   { file: "fr/index.html", lang: "html" },
-  { file: "ro/index.html", lang: "html" },
   { file: "styles.css", lang: "css" },
   { file: "script.js", lang: "javascript" },
   { file: "sitemap.xml", lang: "xml" },

@@ -9,7 +9,7 @@ const REQUIRED_SECTIONS = [
   "why", "gallery", "faq", "footer", "modal", "whatsapp", "jsonLd",
 ];
 
-const REQUIRED_LANGS = ["pt", "en", "es", "fr", "ro"];
+const REQUIRED_LANGS = ["pt", "en", "es", "fr"];
 
 function walkKeys(obj, prefix, issues) {
   if (!obj || typeof obj !== "object") return;
@@ -101,17 +101,6 @@ for (const [lang, expected] of Object.entries(preferred)) {
   const actual = LANGUAGES[lang]?.hero?.heroHighlight;
   console.log(`${lang} heroHighlight:`, actual === expected ? "OK" : `MISMATCH (${actual})`);
 }
-
-// Romanian quality heuristics
-const ro = LANGUAGES.ro;
-const roChecks = {
-  hasAllSections: REQUIRED_SECTIONS.every((s) => ro && ro[s]),
-  faqCount: ro?.faq?.items?.length,
-  servicesCount: ro?.services?.cards?.length,
-  modalHasSubmit: !!ro?.modal?.submit,
-  whyCount: ro?.why?.items?.length,
-};
-console.log("Romanian completeness:", JSON.stringify(roChecks));
 
 process.exit(
   issues.duplicateKeys.length ||
