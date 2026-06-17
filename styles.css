@@ -1115,15 +1115,17 @@ button {
   padding-bottom: 36px;
 }
 
-.footer-logo,
-.footer-logo img {
-  width: 360px;
+.footer-logo {
+  display: block;
+  width: 170px;
+  max-width: 100%;
   height: auto;
   margin-bottom: 14px;
-  opacity: 0.98;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+  filter: none;
+  opacity: 1;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
 .footer-brand p {

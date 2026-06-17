@@ -612,7 +612,7 @@ ${faqItems}
   <footer id="contacto" class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="${prefix}assets/logos/wallfixtv-logo.png" alt="${escapeHtml(t.footer.brandImgAlt)}" class="footer-logo" width="360" height="140" />
+        <img src="${prefix}assets/logos/wallfixtv-logo.png" alt="${escapeHtml(t.footer.brandImgAlt)}" class="footer-logo" width="180" height="70" />
         <p>${escapeHtml(t.footer.brandDesc)}</p>
       </div>
 
