@@ -136,44 +136,6 @@ button {
   flex-shrink: 0;
 }
 
-.language-switcher {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: #ffffff;
-}
-
-.language-switcher a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 34px;
-  height: 30px;
-  padding: 0 8px;
-  border-radius: 999px;
-  font-size: 0.78rem;
-  font-weight: 800;
-  color: var(--navy);
-}
-
-.language-switcher a.active {
-  background: var(--blue);
-  color: #ffffff;
-}
-
-.language-switcher a:hover {
-  background: var(--blue-light);
-  color: var(--blue);
-}
-
-.language-switcher a.active:hover {
-  background: var(--blue);
-  color: #ffffff;
-}
-
 .language-dropdown {
   position: relative;
   display: inline-flex;
