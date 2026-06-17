@@ -388,8 +388,13 @@ function buildPage(langKey) {
   const heroTrust = t.hero.trust
     .map((text, i) => {
       const icons = ["#icon-shield", "#icon-cable", "#icon-check"];
+      const iconMarkup = i === 1
+        ? `<img src="${prefix}assets/images/icon-cabo-eletrico.png?v=2" alt="" width="22" height="22" />`
+        : `<svg viewBox="0 0 24 24"><use href="${icons[i]}"></use></svg>`;
       return `            <div class="hero-trust-item">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="${icons[i]}"></use></svg>
+              <span class="hero-trust-icon" aria-hidden="true">
+                ${iconMarkup}
+              </span>
               <span>${escapeHtml(text)}</span>
             </div>`;
     })
@@ -438,7 +443,7 @@ ${SVG_SPRITE}
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#inicio" aria-label="${escapeHtml(t.header.brandAria)}">
-        <img src="${prefix}assets/logos/wallfixtv-logo.png" alt="${escapeHtml(t.header.brandImgAlt)}" width="200" height="78" />
+        <img src="${prefix}assets/images/logo-wallfixtv-topo.png?v=3" alt="${escapeHtml(t.header.brandImgAlt)}" class="site-logo" />
       </a>
 
       <button class="menu-button" type="button" aria-label="${escapeHtml(t.header.menuOpenLabel)}" aria-expanded="false" aria-controls="mainMenu">
@@ -607,7 +612,7 @@ ${faqItems}
   <footer id="contacto" class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="${prefix}assets/logos/wallfixtv-logo.png" alt="${escapeHtml(t.footer.brandImgAlt)}" class="footer-logo" width="180" height="70" />
+        <img src="${prefix}assets/logos/wallfixtv-logo.png" alt="${escapeHtml(t.footer.brandImgAlt)}" class="footer-logo" width="360" height="140" />
         <p>${escapeHtml(t.footer.brandDesc)}</p>
       </div>
 
