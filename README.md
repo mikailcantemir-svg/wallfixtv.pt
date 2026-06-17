@@ -20,6 +20,7 @@ suportes-articulados-tv.html      # Artigo: suportes articulados
 organizacao-cabos-tv.html         # Artigo: organização de cabos
 instalacao-tv-pladur-tijolo-betao.html  # Artigo: tipos de parede
 guia-tamanho-tv-sala-quarto.html  # Artigo: tamanho da TV por divisão
+altura-ideal-monitor-tv-secretaria-gaming.html  # Artigo: altura ideal do monitor ou TV
 styles.css                        # Estilos e layout responsivo
 script.js                   # Menu mobile, navegação ativa e popup de agendamento
 robots.txt                  # Instruções para motores de busca
@@ -72,6 +73,7 @@ Páginas de conteúdo na raiz do site, ligadas na secção **Artigos e Guias** d
 | `/organizacao-cabos-tv.html` | Organização de cabos |
 | `/instalacao-tv-pladur-tijolo-betao.html` | Pladur, tijolo e betão |
 | `/guia-tamanho-tv-sala-quarto.html` | Tamanho da TV para sala ou quarto |
+| `/altura-ideal-monitor-tv-secretaria-gaming.html` | Altura ideal do monitor ou TV para trabalhar e jogar |
 | `/politica-privacidade.html` | Política de privacidade |
 
 ## SEO aplicado
