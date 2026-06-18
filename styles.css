@@ -507,33 +507,33 @@ button {
   max-width: 560px;
 }
 
-.hero h1 {
+.hero-copy h1 {
   margin: 0 0 20px;
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  line-height: 1.05;
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  line-height: 1.04;
   font-weight: 900;
+  letter-spacing: -0.06em;
   color: var(--navy);
-  letter-spacing: -0.04em;
 }
 
 .hero-location {
   display: block;
   margin-top: 10px;
-  font-size: clamp(1.45rem, 4vw, 2.6rem);
-  line-height: 1.08;
-  font-weight: 900;
+  font-size: clamp(1.25rem, 3vw, 2.1rem);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   color: var(--navy);
-  letter-spacing: -0.035em;
 }
 
 .hero-highlight {
   display: block;
-  margin-top: 12px;
-  color: var(--blue);
-  font-size: clamp(1.55rem, 3vw, 2.45rem);
-  font-weight: 900;
-  letter-spacing: -0.035em;
+  margin-top: 14px;
+  font-size: clamp(1.35rem, 3.6vw, 2.4rem);
   line-height: 1.12;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--blue);
 }
 
 .hero-subtitle {
@@ -1401,18 +1401,6 @@ button {
     --header-h: 76px;
   }
 
-  .hero h1 {
-    font-size: clamp(2rem, 6vw, 2.8rem);
-  }
-
-  .hero-location {
-    font-size: clamp(1.3rem, 4.5vw, 2rem);
-  }
-
-  .hero-highlight {
-    font-size: clamp(1.45rem, 4.5vw, 2.2rem);
-  }
-
   .process-flow {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
@@ -1608,20 +1596,6 @@ button {
     padding-top: 0;
   }
 
-  .hero h1 {
-    font-size: clamp(2rem, 9vw, 2.8rem);
-    line-height: 1.05;
-  }
-
-  .hero-location {
-    font-size: clamp(1.2rem, 5.5vw, 1.75rem);
-    line-height: 1.1;
-  }
-
-  .hero-highlight {
-    font-size: clamp(1.35rem, 6vw, 1.9rem);
-  }
-
   .hero-subtitle {
     max-width: 100%;
     margin-left: auto;
@@ -1732,6 +1706,21 @@ button {
 @media (max-width: 640px) {
   .container {
     width: min(100% - 28px, 1180px);
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.1rem, 10vw, 3.2rem);
+    line-height: 1.05;
+  }
+
+  .hero-location {
+    font-size: clamp(1.05rem, 6vw, 1.55rem);
+    margin-top: 8px;
+  }
+
+  .hero-highlight {
+    font-size: clamp(1.15rem, 6.5vw, 1.8rem);
+    margin-top: 10px;
   }
 
   .service-grid,
