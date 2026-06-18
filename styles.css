@@ -2233,3 +2233,86 @@ body.modal-open {
     right: 10px;
   }
 }
+
+/* Hero mobile — iPhone / ecrãs até 480px */
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 48px;
+  }
+
+  .hero-grid {
+    gap: 28px;
+  }
+
+  .hero-copy h1 {
+    max-width: 410px;
+    margin-inline: auto;
+    font-size: clamp(2.35rem, 10.2vw, 3.25rem);
+    line-height: 1.03;
+    letter-spacing: -0.055em;
+    text-align: center;
+  }
+
+  .hero-location {
+    display: block;
+    max-width: 390px;
+    margin: 12px auto 0;
+    font-size: clamp(1.25rem, 6.1vw, 1.75rem);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    text-align: center;
+  }
+
+  .hero-highlight {
+    display: block;
+    max-width: 390px;
+    margin: 12px auto 0;
+    font-size: clamp(1.18rem, 6.2vw, 1.65rem);
+    line-height: 1.18;
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    word-spacing: 0.04em;
+    text-align: center;
+    color: var(--blue);
+  }
+
+  .hero-subtitle {
+    max-width: 390px;
+    margin: 24px auto 0;
+    font-size: 1.02rem;
+    line-height: 1.58;
+    text-align: center;
+  }
+
+  .hero-actions {
+    width: 100%;
+    max-width: 390px;
+    margin: 28px auto 0;
+    gap: 14px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    min-height: 56px;
+    padding-inline: 18px;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.98rem;
+    border-radius: 999px;
+  }
+
+  .hero-trust {
+    max-width: 360px;
+    margin: 28px auto 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    justify-items: center;
+  }
+
+  .hero-trust-item {
+    justify-content: center;
+    text-align: center;
+    font-size: 0.98rem;
+  }
+}
