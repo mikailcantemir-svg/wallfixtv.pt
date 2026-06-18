@@ -551,11 +551,26 @@ button {
 
 .hero-highlight {
   display: block;
-  margin-top: 12px;
-  font-size: clamp(1.35rem, 3.5vw, 2.4rem);
-  line-height: 1.12;
+  width: fit-content;
+  max-width: 680px;
+  margin-top: 18px;
+  font-size: clamp(1.55rem, 2.6vw, 2.55rem);
+  line-height: 1.16;
   font-weight: 900;
+  letter-spacing: -0.018em;
+  word-spacing: 0.06em;
   color: var(--blue);
+  text-wrap: balance;
+  white-space: normal;
+  overflow-wrap: normal;
+}
+
+@media (min-width: 981px) {
+  .hero-highlight {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+  }
 }
 
 .hero-subtitle {
@@ -1617,6 +1632,18 @@ button {
     margin-inline: auto;
   }
 
+  .hero-highlight {
+    width: 100%;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: clamp(1.45rem, 4.2vw, 2.15rem);
+    line-height: 1.18;
+    letter-spacing: -0.015em;
+    word-spacing: 0.06em;
+  }
+
   .hero-actions {
     justify-content: center;
     width: 100%;
@@ -1794,11 +1821,6 @@ button {
   .hero-location {
     font-size: clamp(1.05rem, 5.5vw, 1.45rem);
     margin-top: 8px;
-  }
-
-  .hero-highlight {
-    font-size: clamp(1.15rem, 6vw, 1.75rem);
-    margin-top: 10px;
   }
 
   .hero-subtitle {
@@ -2264,16 +2286,14 @@ body.modal-open {
   }
 
   .hero-highlight {
-    display: block;
-    max-width: 390px;
-    margin: 12px auto 0;
-    font-size: clamp(1.18rem, 6.2vw, 1.65rem);
-    line-height: 1.18;
-    font-weight: 900;
-    letter-spacing: -0.025em;
-    word-spacing: 0.04em;
+    width: 100%;
+    max-width: 360px;
+    margin-top: 14px;
+    font-size: clamp(1.22rem, 5.7vw, 1.62rem);
+    line-height: 1.22;
+    letter-spacing: -0.01em;
+    word-spacing: 0.08em;
     text-align: center;
-    color: var(--blue);
   }
 
   .hero-subtitle {
