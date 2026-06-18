@@ -529,6 +529,11 @@ button {
   color: var(--navy);
 }
 
+.hero h1,
+.hero-copy h1 {
+  text-align: left;
+}
+
 .hero-copy h1,
 .hero-subtitle {
   max-width: 760px;
@@ -537,7 +542,7 @@ button {
 .hero-location {
   display: block;
   margin-top: 10px;
-  font-size: clamp(1.25rem, 3vw, 2.1rem);
+  font-size: clamp(1.15rem, 2.8vw, 2rem);
   line-height: 1.12;
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -546,11 +551,10 @@ button {
 
 .hero-highlight {
   display: block;
-  margin-top: 14px;
-  font-size: clamp(1.35rem, 3.6vw, 2.4rem);
+  margin-top: 12px;
+  font-size: clamp(1.35rem, 3.5vw, 2.4rem);
   line-height: 1.12;
   font-weight: 900;
-  letter-spacing: -0.04em;
   color: var(--blue);
 }
 
@@ -1603,10 +1607,13 @@ button {
     max-width: 760px;
     margin-inline: auto;
     padding-top: 0;
+    text-align: center;
   }
 
+  .hero h1,
   .hero-copy h1,
   .hero-subtitle {
+    text-align: center;
     margin-inline: auto;
   }
 
@@ -1701,8 +1708,17 @@ button {
 
   .service-card,
   .article-card,
-  .support-card {
+  .support-card,
+  .why-item {
     text-align: center;
+    margin-inline: auto;
+    width: 100%;
+    max-width: 430px;
+  }
+
+  .section-heading {
+    text-align: center;
+    margin-inline: auto;
   }
 
   .service-card .btn,
@@ -1768,19 +1784,20 @@ button {
     padding-top: 42px;
   }
 
+  .hero h1,
   .hero-copy h1 {
-    font-size: clamp(2.1rem, 10vw, 3.2rem);
-    line-height: 1.05;
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.06;
     text-align: center;
   }
 
   .hero-location {
-    font-size: clamp(1.05rem, 6vw, 1.55rem);
+    font-size: clamp(1.05rem, 5.5vw, 1.45rem);
     margin-top: 8px;
   }
 
   .hero-highlight {
-    font-size: clamp(1.15rem, 6.5vw, 1.8rem);
+    font-size: clamp(1.15rem, 6vw, 1.75rem);
     margin-top: 10px;
   }
 
@@ -1788,11 +1805,13 @@ button {
     text-align: center;
     font-size: 1rem;
     line-height: 1.65;
+    max-width: 420px;
   }
 
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
     max-width: 420px;
     margin-inline: auto;
   }
@@ -1800,6 +1819,7 @@ button {
   .hero-actions .btn {
     width: 100%;
     min-height: 56px;
+    justify-content: center;
     text-align: center;
   }
 
