@@ -516,9 +516,19 @@ button {
   letter-spacing: -0.04em;
 }
 
-.hero-highlight {
+.hero-location {
   display: block;
   margin-top: 10px;
+  font-size: clamp(1.45rem, 4vw, 2.6rem);
+  line-height: 1.08;
+  font-weight: 900;
+  color: var(--navy);
+  letter-spacing: -0.035em;
+}
+
+.hero-highlight {
+  display: block;
+  margin-top: 12px;
   color: var(--blue);
   font-size: clamp(1.55rem, 3vw, 2.45rem);
   font-weight: 900;
@@ -1395,6 +1405,10 @@ button {
     font-size: clamp(2rem, 6vw, 2.8rem);
   }
 
+  .hero-location {
+    font-size: clamp(1.3rem, 4.5vw, 2rem);
+  }
+
   .hero-highlight {
     font-size: clamp(1.45rem, 4.5vw, 2.2rem);
   }
@@ -1597,6 +1611,11 @@ button {
   .hero h1 {
     font-size: clamp(2rem, 9vw, 2.8rem);
     line-height: 1.05;
+  }
+
+  .hero-location {
+    font-size: clamp(1.2rem, 5.5vw, 1.75rem);
+    line-height: 1.1;
   }
 
   .hero-highlight {
