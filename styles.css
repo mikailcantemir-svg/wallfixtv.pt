@@ -728,20 +728,25 @@ button {
   }
 
   .hero-actions {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: stretch;
+    justify-content: flex-start;
     width: 100%;
-    max-width: 460px;
+    max-width: 580px;
     gap: 14px;
     margin-bottom: 30px;
   }
 
   .hero-actions .btn {
-    width: 100%;
-    max-width: 460px;
+    flex: 1 1 calc(50% - 7px);
+    width: auto;
+    min-width: min(100%, 220px);
+    max-width: 288px;
     min-height: 60px;
-    padding-inline: 28px;
-    font-size: 1rem;
+    padding-inline: 22px;
+    font-size: 0.96rem;
   }
 
   .hero-trust {
@@ -1739,12 +1744,20 @@ button {
   }
 
   .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 100%;
+    max-width: 420px;
+    margin-inline: auto;
   }
 
   .hero-actions .btn {
+    width: 100%;
+    max-width: 100%;
     justify-content: center;
+    margin-inline: auto;
   }
 
   .hero-trust {
@@ -1925,18 +1938,23 @@ button {
   }
 
   .hero-actions {
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    max-width: 420px;
+    max-width: min(100%, 420px);
     margin-inline: auto;
+    padding-inline: 4px;
   }
 
   .hero-actions .btn {
     width: 100%;
+    max-width: 100%;
     min-height: 56px;
     justify-content: center;
     text-align: center;
+    margin-inline: auto;
   }
 
   .hero-trust {
@@ -2399,20 +2417,27 @@ body.modal-open {
   }
 
   .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    max-width: 390px;
+    max-width: min(100%, 390px);
     margin: 28px auto 0;
+    padding-inline: 4px;
     gap: 14px;
   }
 
   .hero-actions .btn {
     width: 100%;
+    max-width: 100%;
     min-height: 56px;
     padding-inline: 18px;
     justify-content: center;
     text-align: center;
     font-size: 0.98rem;
     border-radius: 999px;
+    margin-inline: auto;
   }
 
   .hero-trust {
