@@ -387,7 +387,43 @@
           </article>
 
           <article class="why-item">
-            <img class="why-icon-img" src="./assets/icon-vantagem-diamante.svg" alt="Ícone de diamante" width="30" height="30" />
+            <svg
+              class="advantage-icon"
+              viewBox="0 0 24 24"
+              width="32"
+              height="32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 8.5L7.2 4H16.8L20 8.5L12 20L4 8.5Z"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M4 8.5H20"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+              <path
+                d="M7.2 4L9.2 8.5L12 20"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M16.8 4L14.8 8.5L12 20"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
             <div>
               <h3>Acabamentos premium</h3>
               <p>Alinhamento perfeito e cabos ocultos para um visual clean.</p>
@@ -529,6 +565,35 @@
         </header>
 
         <p class="gallery-intro">Alguns exemplos de instalações e preparações realizadas, desde o nivelamento até ao acabamento final.</p>
+
+        <article class="gallery-work" aria-labelledby="gallery-work-nivelamento-title">
+          <header class="gallery-work-header">
+            <h3 id="gallery-work-nivelamento-title">Instalação de TV com verificação final de nivelamento</h3>
+            <p>Instalação da televisão concluída com verificação final através de nível digital e nível de bolha, confirmando o alinhamento antes da entrega do serviço.</p>
+            <p class="gallery-work-trust">O nivelamento é verificado no final da instalação através de ferramentas de medição adequadas.</p>
+          </header>
+
+          <div class="gallery-work-photos" data-lightbox-group="trabalho-nivelamento">
+            <button type="button" class="gallery-work-photo" data-lightbox-index="0" aria-label="Ampliar: Televisão instalada na parede de uma sala">
+              <picture>
+                <source srcset="./assets/images/trabalho-tv-nivelamento-final.webp" type="image/webp" />
+                <img src="./assets/images/trabalho-tv-nivelamento-final.jpg" alt="Televisão instalada na parede de uma sala" width="799" height="768" loading="lazy" />
+              </picture>
+            </button>
+            <button type="button" class="gallery-work-photo" data-lightbox-index="1" aria-label="Ampliar: Verificação do nivelamento da televisão com nível digital a indicar 0,0 graus">
+              <picture>
+                <source srcset="./assets/images/trabalho-tv-nivel-digital.webp" type="image/webp" />
+                <img src="./assets/images/trabalho-tv-nivel-digital.jpg" alt="Verificação do nivelamento da televisão com nível digital a indicar 0,0 graus" width="768" height="1024" loading="lazy" />
+              </picture>
+            </button>
+            <button type="button" class="gallery-work-photo" data-lightbox-index="2" aria-label="Ampliar: Confirmação do alinhamento da televisão através de nível de bolha">
+              <picture>
+                <source srcset="./assets/images/trabalho-tv-nivel-bolha.webp" type="image/webp" />
+                <img src="./assets/images/trabalho-tv-nivel-bolha.jpg" alt="Confirmação do alinhamento da televisão através de nível de bolha" width="768" height="1024" loading="lazy" />
+              </picture>
+            </button>
+          </div>
+        </article>
 
         <div class="gallery-grid">
           <figure class="gallery-item">
@@ -956,6 +1021,19 @@
         </div>
       </form>
     </div>
+  </div>
+
+  <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Fotografia ampliada">
+    <button type="button" class="gallery-lightbox-close" aria-label="Fechar fotografia">&times;</button>
+    <button type="button" class="gallery-lightbox-nav gallery-lightbox-prev" aria-label="Fotografia anterior">&lsaquo;</button>
+    <button type="button" class="gallery-lightbox-nav gallery-lightbox-next" aria-label="Fotografia seguinte">&rsaquo;</button>
+    <figure class="gallery-lightbox-figure">
+      <picture>
+        <source id="galleryLightboxSource" srcset="" type="image/webp" />
+        <img src="" alt="" id="galleryLightboxImage" width="799" height="768" />
+      </picture>
+      <figcaption id="galleryLightboxCaption"></figcaption>
+    </figure>
   </div>
 
   <script>window.WALLFIXTV_I18N = {"scheduleIntro":"Olá, gostaria de agendar uma instalação de TV na parede.","scheduleFieldLabels":{"name":"Nome","phone":"Contacto","location":"Localidade","date":"Data pretendida","time":"Hora pretendida","tvSize":"Tamanho da TV","wall":"Tipo de parede","support":"Tipo de suporte","cables":"Organização de cabos","notes":"Observações"},"scheduleClosing":"Por favor confirme disponibilidade. Obrigado.","error":"Preencha todos os campos obrigatórios.","privacyError":"Aceite a Política de Privacidade para continuar.","quote":"Olá, gostaria de pedir um orçamento para montagem de TV na parede."};</script>
