@@ -3216,7 +3216,7 @@ body.modal-open {
   color: #3a4a5e;
 }
 
-.local-provider-meta {
+.local-provider-card ul {
   margin: 0 0 18px;
   padding: 0;
   list-style: none;
@@ -3226,7 +3226,9 @@ body.modal-open {
   color: var(--navy);
 }
 
-.local-provider-meta li {
+.local-provider-card ul li {
+  position: relative;
+  padding-left: 24px;
   line-height: 1.45;
 }
 

@@ -662,7 +662,7 @@ ${faqItems}
           <a href="${prefix}politica-privacidade.html">${escapeHtml(t.footer.privacyLink)}</a>
         </p>
         <p class="footer-legal">
-          WallFixTV.pt é um serviço prestado por Mihail Cantemir — Empresário em Nome Individual. NIF: 267285752.
+          WallFixTV.pt — Serviço de instalação de televisões na parede
         </p>
       </div>
     </div>
