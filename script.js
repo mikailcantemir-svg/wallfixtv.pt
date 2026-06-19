@@ -257,3 +257,36 @@ document.querySelectorAll(".language-dropdown").forEach((dropdown) => {
     }
   });
 });
+
+(function () {
+  const CTA_EVENT_MAP = {
+    "local-whatsapp": "cta_whatsapp_click",
+    "local-quote-checklist": "cta_whatsapp_click",
+    "mobile-sticky-whatsapp": "cta_mobile_whatsapp_click",
+    "local-price": "cta_price_click",
+    "local-google-reviews": "cta_google_reviews_click",
+    "cta_phone_click": "cta_phone_click",
+  };
+
+  function trackCta(eventName, location) {
+    const eventData = { location: location || "" };
+    if (typeof window.gtag === "function") {
+      window.gtag("event", eventName, eventData);
+    }
+    if (Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({ event: eventName, ...eventData });
+    }
+  }
+
+  document.addEventListener("click", (event) => {
+    const target = event.target.closest("[data-cta]");
+    if (!target) return;
+
+    const cta = target.getAttribute("data-cta");
+    const location = target.getAttribute("data-location") || "";
+    const eventName = CTA_EVENT_MAP[cta];
+    if (eventName) {
+      trackCta(eventName, location);
+    }
+  });
+})();
